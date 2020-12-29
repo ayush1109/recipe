@@ -5,13 +5,14 @@ import { Instagram, Twitter, Facebook } from 'react-feather';
 
 
 function Header(props) {
-    const [show, setShow] = useState(false);
+    const [show1, setShow1] = useState(false);
+    const [show2, setShow2] = useState(false);
 
-    const handleClose1 = () => setShow(false);
-    const handleShow1 = () => setShow(true);
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
 
-    const handleClose2 = () => setShow(false);
-    const handleShow2 = () => setShow(true);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
 
     return (
         <>
@@ -34,7 +35,7 @@ function Header(props) {
                     </ul>
                 </Navbar.Collapse>
             </Navbar>
-            <Modal show={show} onHide={handleClose1}>
+            <Modal show={show1} onHide={handleClose1}>
                 <Modal.Body closeButton>
                     <Form onSubmit={(e) => {
                         handleClose1();
@@ -50,7 +51,7 @@ function Header(props) {
                     </Form>
                 </Modal.Body>
             </Modal>
-            <Modal show={show} onHide={handleClose2}>
+            <Modal show={show2} onHide={handleClose2}>
                 <Modal.Header closeButton>
                     <Modal.Title>LogIn/SignUp</Modal.Title>
                 </Modal.Header>
